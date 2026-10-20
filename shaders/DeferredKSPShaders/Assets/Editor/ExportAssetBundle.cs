@@ -14,7 +14,7 @@ namespace Deferred
 			if (!Directory.Exists (outDir))
 				Directory.CreateDirectory (outDir);
 
-			var opts = BuildAssetBundleOptions.DeterministicAssetBundle | BuildAssetBundleOptions.ForceRebuildAssetBundle;
+			var opts = BuildAssetBundleOptions.ForceRebuildAssetBundle;
             BuildTarget[] platforms = { BuildTarget.StandaloneWindows };
 			BuildPipeline.BuildAssetBundles(outDir, opts, BuildTarget.StandaloneWindows);
 
